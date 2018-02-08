@@ -1,0 +1,11 @@
+#!/bin/bash
+
+#for i in {1..12}
+#do
+
+	date=`date`;
+
+	echo "===== Invalidating Settions at  $date ============================";
+	curl http://localhost:8080/${OPENMRS_NAME}/monitoring?action=invalidate_sessions >> /dev/null;
+#	sleep 1h;
+#done

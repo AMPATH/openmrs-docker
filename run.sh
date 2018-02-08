@@ -20,12 +20,16 @@ OPENMRS_CONNECTION_URL="connection.url=jdbc\:mysql\://$OPENMRS_MYSQL_HOST\:$OPEN
 echo "${OPENMRS_CONNECTION_URL}" >> /root/temp/openmrs-runtime.properties
 echo "connection.username=${OPENMRS_DB_USER}" >> /root/temp/openmrs-runtime.properties
 echo "connection.password=${OPENMRS_DB_PASS}" >> /root/temp/openmrs-runtime.properties
-
-cp /root/temp/openmrs-runtime.properties ${OPENMRS_HOME}/
+mkdir -pv ${OPENMRS_HOME}/${OPENMRS_NAME}
+cp /root/temp/openmrs-runtime.properties ${OPENMRS_HOME}/${OPENMRS_NAME}/${OPENMRS_NAME}-runtime.properties
+cp /root/temp/openmrs.war  ${CATALINA_HOME}/webapps/${OPENMRS_NAME}.war
 # Copy base/dependency modules to module folder
 echo "Copying module dependencies and reference application modules..."
+export OPENMRS_MODULES=${OPENMRS_HOME}/${OPENMRS_NAME}/modules
+rm -rf ${OPENMRS_HOME}/${OPENMRS_NAME}/modules/
 mkdir -pv $OPENMRS_MODULES
 cp /root/temp/modules/*.omod $OPENMRS_MODULES
+rm -rf ${OPENMRS_HOME}/${OPENMRS_NAME}/.openmrs-lib-cache/
 echo "Modules copied."
 
 # Cleanup temp files
@@ -34,6 +38,8 @@ fi
 
 # Set custom memory options for tomcat
 export JAVA_OPTS="-Dfile.encoding=UTF-8 -server -Xms256m -Xmx1024m -XX:PermSize=256m -XX:MaxPermSize=512m"
-
+echo "Setup cron"
+service rsyslog start
+service cron start
 # Run tomcat
 catalina.sh run
