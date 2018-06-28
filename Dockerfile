@@ -18,7 +18,7 @@ ENV OPENMRS_MYSQL_PORT=""
 # Create database and setup openmrs db user
 COPY openmrs.war /root/temp/
 RUN mkdir -p ${OPENMRS_HOME}
-RUN apt-get update && apt-get install -y mysql-client libxml2-utils \
+RUN apt-get update && apt-get install -y mysql-client libxml2-utils openjdk-8-jdk \
     && mkdir -p /root/temp/modules
 RUN apt-get update \
  && DEBIAN_FRONTEND=noninteractive apt-get install -y \
