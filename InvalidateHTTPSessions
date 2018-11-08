@@ -6,6 +6,6 @@
 	date=`date`;
 
 	echo "===== Invalidating Settions at  $date ============================";
-	curl http://localhost:8080/${OPENMRS_NAME}/monitoring?action=invalidate_sessions >> /dev/null;
+	/usr/bin/curl --silent http://localhost:8080/${OPENMRS_NAME}/monitoring?action=invalidate_sessions >> /dev/null;
 #	sleep 1h;
 #done
