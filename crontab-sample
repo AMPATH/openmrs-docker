@@ -1,2 +1,2 @@
-0 * * * * root /usr/local/tomcat/InvalidateHTTPSessions >> InvalidatedHTTPSessions_log.txt
-0 * * * * root /usr/local/tomcat/ScheduledGC >> ScheduledGC_log.txt
+# * * * * * root  curl --silent http://localhost:8080/${OPENMRS_NAME}/monitoring?action=invalidate_sessions >> /dev/null
+*/15 * * * * root /bin/bash /usr/local/tomcat/ScheduledGC
