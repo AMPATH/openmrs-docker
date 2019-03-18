@@ -1,4 +1,4 @@
-FROM tomcat:8-jre8
+FROM tomcat:7-jre8
 
 ENV OPENMRS_HOME /root/.OpenMRS
 ENV OPENMRS_MODULES ${OPENMRS_HOME}/modules
