@@ -1,11 +1,11 @@
 version: '2'
 services:
-    amrs:
-        container_name: ampath_amrs_prod
-        image: 10.50.80.56:5005/openmrs:2.1.2
+    kenyaemr:
+        container_name: kenyaemr
+        image: 10.50.80.56:5005/kenyaemr:17.0.4
         env_file: main.env
         volumes:
-            - /home/achachiez/Code/openmrs-home:/root/.OpenMRS
+             - ./openmrs:/root/.OpenMRS
         restart: unless-stopped
         # deploy:
         #   mode: replicated

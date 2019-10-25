@@ -14,21 +14,19 @@ while ! mysqladmin ping -h"$OPENMRS_MYSQL_HOST" -P $OPENMRS_MYSQL_PORT --silent;
     sleep 2
 done
 
-
  # Write openmrs-runtime.properties file with linked database settings
 OPENMRS_CONNECTION_URL="connection.url=jdbc\:mysql\://$OPENMRS_MYSQL_HOST\:$OPENMRS_MYSQL_PORT/${DB_NAME}?autoReconnect\=true&sessionVariables\=default_storage_engine\=InnoDB&useUnicode\=true&characterEncoding\=UTF-8"
 echo "${OPENMRS_CONNECTION_URL}" >> /root/temp/openmrs-runtime.properties
 echo "connection.username=${OPENMRS_DB_USER}" >> /root/temp/openmrs-runtime.properties
 echo "connection.password=${OPENMRS_DB_PASS}" >> /root/temp/openmrs-runtime.properties
-mkdir -pv ${OPENMRS_HOME}/${OPENMRS_NAME}
-cp /root/temp/openmrs-runtime.properties ${OPENMRS_HOME}/${OPENMRS_NAME}/${OPENMRS_NAME}-runtime.properties
 cp /root/temp/openmrs.war  ${CATALINA_HOME}/webapps/${OPENMRS_NAME}.war
 # Copy base/dependency modules to module folder
 echo "Copying module dependencies and reference application modules..."
-export OPENMRS_MODULES=${OPENMRS_HOME}/${OPENMRS_NAME}/modules
+export OPENMRS_MODULES=${OPENMRS_HOME}/modules
 rm -rf ${OPENMRS_HOME}/${OPENMRS_NAME}/modules/
 mkdir -pv $OPENMRS_MODULES
 cp /root/temp/modules/*.omod $OPENMRS_MODULES
+cp /root/temp/openmrs-runtime.properties  ${OPENMRS_HOME}/${OPENMRS_NAME}-runtime.properties
 rm -rf ${OPENMRS_HOME}/${OPENMRS_NAME}/.openmrs-lib-cache/
 echo "Modules copied."
 
