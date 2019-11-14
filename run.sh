@@ -27,6 +27,7 @@ rm -rf ${OPENMRS_HOME}/${OPENMRS_NAME}/modules/
 mkdir -pv $OPENMRS_MODULES
 cp /root/temp/modules/*.omod $OPENMRS_MODULES
 cp /root/temp/openmrs-runtime.properties  ${OPENMRS_HOME}/${OPENMRS_NAME}-runtime.properties
+cp /root/temp/openmrs-runtime.properties /usr/local/tomcat/
 rm -rf ${OPENMRS_HOME}/${OPENMRS_NAME}/.openmrs-lib-cache/
 echo "Modules copied."
 
