@@ -1,1 +1,4 @@
 main.env
+/openmrs
+/db
+/dbdump/amrs.sql
