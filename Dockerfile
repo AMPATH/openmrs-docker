@@ -5,7 +5,7 @@ ENV OPENMRS_MODULES ${OPENMRS_HOME}/modules
 # ENV OPENMRS_PLATFORM_URL="https://nofile.io/f/TvXKVtdVjOX/openmrs.war"
 # ENV OPENMRS_REST_URL="https://modules.openmrs.org/modulus/api/releases/1616/download/webservices.rest-2.20.0.omod"
 
-ENV DB_NAME="openmrs"
+ENV DB_NAME="amrsocl"
 ENV OPENMRS_DB_USER=""
 ENV OPENMRS_DB_PASS=""
 ENV OPENMRS_MYSQL_HOST=""
