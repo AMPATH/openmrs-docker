@@ -33,7 +33,7 @@ RUN apt-get update \
 ADD modules /root/temp/modules/
 #Copy OpenMRS properties file
 COPY openmrs-runtime.properties /root/temp/
-COPY ./InvalidateHTTPSessions InvalidateHTTPSessions
+#COPY ./InvalidateHTTPSessions InvalidateHTTPSessions
 COPY ./ScheduledGC ScheduledGC
 EXPOSE 8080
 
