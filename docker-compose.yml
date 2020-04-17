@@ -16,6 +16,7 @@ services:
             timeout: 20s
     ocl-mysql:
         restart: "always"
+        container_name: amrs-db
         image: mysql:5.6
         command: "mysqld --character-set-server=utf8 --collation-server=utf8_general_ci"
         environment:
