@@ -32,7 +32,7 @@ cp /root/temp/modules/*.omod $OPENMRS_MODULES
 rm -rf ${OPENMRS_HOME}/${OPENMRS_NAME}/.openmrs-lib-cache/
 echo "Modules copied."
 #Configure Bahmni appointments UI
-sh bahmni_config.sh
+bash /bahmni_config.sh
 # Cleanup temp files
 rm -r /root/temp
 fi

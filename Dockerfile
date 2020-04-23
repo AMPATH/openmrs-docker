@@ -34,7 +34,7 @@ ADD modules /root/temp/modules/
 #Copy OpenMRS properties file
 COPY openmrs-runtime.properties /root/temp/
 #Copy Bahmni Configurations
-COPY bahmniapps /root/temp/
+COPY bahmniapps /root/temp/bahmniapps
 COPY bahmni_config.sh /bahmni_config.sh
 #COPY ./InvalidateHTTPSessions InvalidateHTTPSessions
 COPY ./ScheduledGC ScheduledGC
