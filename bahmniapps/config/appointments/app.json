@@ -1,0 +1,60 @@
+{
+  "id": "bahmni.appointments",
+  "description": "Bahmni Appointments Scheduling App",
+  "extensionPoints": [
+    {
+      "id": "org.bahmni.appointments",
+      "description": "Bahmni Admin Page"
+    }
+  ],
+  "config": {
+    "minCharLengthToTriggerPatientSearch": 3,
+    "enableSpecialities": false,
+    "enableAppointmentRequests": true,
+    "startOfWeek": "Monday",
+    "maxAppointmentProviders": 100,
+    "calendarSlotDuration": "00:30",
+    "calendarSlotLabelInterval": "01:00",
+    "startOfDay":"09:00",
+    "endOfDay":"19:00",
+    "printListViewTemplateUrl": "/appointments/bahmniapps/config/appointments/printListView.html",
+    "enableServiceTypes": true,
+    "enableCalendarView": true,
+    "isServiceOnAppointmentEditable": false,
+    "enableResetAppointmentStatuses": ["CheckedIn"],
+    "colorsForAppointmentService": [
+      "#006400",
+      "#DC143C",
+      "#00008B",
+      "#3F51B5",
+      "#B8860B",
+      "#A9A9A9",
+      "#BDB76B",
+      "#8B008B",
+      "#556B2F",
+      "#FF8C00",
+      "#9932CC",
+      "#8B0000",
+      "#8FBC8F",
+      "#483D8B",
+      "#2F4F4F",
+      "#3E2723",
+      "#00CED1",
+      "#9400D3",
+      "#FF1493",
+      "#00BFFF"
+    ],
+    "allowedActions": ["CheckedIn", "Completed", "Missed", "Cancelled"],
+    "allowedActionsByStatus": {
+      "Requested": ["CheckedIn", "Missed", "Cancelled"],
+      "Scheduled": ["CheckedIn", "Missed", "Cancelled"],
+      "CheckedIn": ["Completed", "Missed", "Cancelled"]
+    },
+    "colorsForListView": {
+      "Requested": "#c2b9df",
+      "Missed": "#fceab6",
+      "Cancelled": "#fcb6b6"
+    },
+    "autoRefreshIntervalInSeconds": 60
+  }
+}
