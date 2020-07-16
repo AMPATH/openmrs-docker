@@ -6,4 +6,4 @@ to override the env variables defined in the docker file  refer to http://ryanni
 
 
 # last working image hash
-10.50.80.56:5005/openmrs:2.1.2@sha256:89a6385b559506d256b8dc470f60ee501a26c84cb5a7289ef371a3b8310412c3
+10.50.80.56:5005/openmrs:2.1.2@sha256:3e4fd253ff49d86d753903fa45df3f717377665fefcc5b8de225b7c8de2cbcce
