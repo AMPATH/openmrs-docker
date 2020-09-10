@@ -14,6 +14,6 @@
       "@openmrs/esm-error-handling": "https://spa-modules.nyc3.digitaloceanspaces.com/@openmrs/esm-error-handling/50053ebc76e0f9695f5731bc62b831be842d94c3/openmrs-esm-error-handling.js",
       "@openmrs/esm-extension-manager": "https://spa-modules.nyc3.digitaloceanspaces.com/@openmrs/esm-extension-manager/03845a050efa23d9edc6bf043214cd472f63c485/openmrs-esm-extension-manager.js",
       "@openmrs/esm-implementer-tools-app": "https://spa-modules.nyc3.digitaloceanspaces.com/@openmrs/esm-implementer-tools-app/a45a90a1f9a987b41b70d53aec2e4c2c8da8596a/openmrs-esm-implementer-tools-app.js",
-      "@ampath/esm-clinic-dashboard-hiv-lists-app": "http://localhost:8080/microfrontends/esm-clinic-dashboard/ampath-esm-clinic-dashboard-hiv-lists-app.js"
+      "@ampath/esm-clinic-dashboard-hiv-lists-app": "https://ngx.ampath.or.ke/amrs/frontend/esm-clinic-dashboard/ampath-esm-clinic-dashboard-hiv-lists-app.js"
     }
   }

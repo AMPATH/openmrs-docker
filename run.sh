@@ -35,7 +35,7 @@ echo "Modules copied."
 # Setup microfrontends
 echo "Setting up microfrontends"
 ls /root/temp/microfrontends
-cp -R /root/temp/microfrontends /usr/local/tomcat/webapps/
+cp -r /root/temp/microfrontends/* ${OPENMRS_HOME}/${OPENMRS_NAME}/frontend/
 cp  /root/temp/microfrontends/import-map.json ${OPENMRS_HOME}/${OPENMRS_NAME}/frontend/import-map.json
 ls ${OPENMRS_HOME}/${OPENMRS_NAME}/frontend/
 # Cleanup temp files
