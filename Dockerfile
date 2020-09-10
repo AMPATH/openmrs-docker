@@ -10,7 +10,7 @@ ENV OPENMRS_DB_USER=""
 ENV OPENMRS_DB_PASS=""
 ENV OPENMRS_MYSQL_HOST=""
 ENV OPENMRS_MYSQL_PORT=""
-
+ENV OPENMRS_NAME=""
 # Refresh repositories and add mysql-client and libxml2-utils (for xmllint)
 # Download and Deploy OpenMRS
 # Download and copy reference application modules (if defined)
@@ -36,7 +36,8 @@ COPY openmrs-runtime.properties /root/temp/
 #COPY ./InvalidateHTTPSessions InvalidateHTTPSessions
 COPY ./ScheduledGC ScheduledGC
 EXPOSE 8080
-
+# Add microfrontend assets
+ADD microfrontends /root/temp/microfrontends
 # Setup openmrs, optionally load demo data, and start tomcat
 COPY run.sh /run.sh
 ENTRYPOINT ["/run.sh"]

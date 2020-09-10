@@ -21,6 +21,7 @@ echo "${OPENMRS_CONNECTION_URL}" >> /root/temp/openmrs-runtime.properties
 echo "connection.username=${OPENMRS_DB_USER}" >> /root/temp/openmrs-runtime.properties
 echo "connection.password=${OPENMRS_DB_PASS}" >> /root/temp/openmrs-runtime.properties
 mkdir -pv ${OPENMRS_HOME}/${OPENMRS_NAME}
+mkdir -pv ${OPENMRS_HOME}/${OPENMRS_NAME}/frontend
 cp /root/temp/openmrs-runtime.properties ${OPENMRS_HOME}/${OPENMRS_NAME}/${OPENMRS_NAME}-runtime.properties
 cp /root/temp/openmrs.war  ${CATALINA_HOME}/webapps/${OPENMRS_NAME}.war
 # Copy base/dependency modules to module folder
@@ -31,7 +32,12 @@ mkdir -pv $OPENMRS_MODULES
 cp /root/temp/modules/*.omod $OPENMRS_MODULES
 rm -rf ${OPENMRS_HOME}/${OPENMRS_NAME}/.openmrs-lib-cache/
 echo "Modules copied."
-
+# Setup microfrontends
+echo "Setting up microfrontends"
+ls /root/temp/microfrontends
+cp -R /root/temp/microfrontends /usr/local/tomcat/webapps/
+cp  /root/temp/microfrontends/import-map.json ${OPENMRS_HOME}/${OPENMRS_NAME}/frontend/import-map.json
+ls ${OPENMRS_HOME}/${OPENMRS_NAME}/frontend/
 # Cleanup temp files
 rm -r /root/temp
 fi
