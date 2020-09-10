@@ -1,0 +1,19 @@
+{
+    "imports": {
+      "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@4.4.1/lib/system/single-spa.min.js",
+      "i18next": "https://cdn.jsdelivr.net/npm/i18next@19.0.0/dist/umd/i18next.min.js",
+      "react": "https://cdn.jsdelivr.net/npm/react@16.12.0/umd/react.production.min.js",
+      "react-dom": "https://cdn.jsdelivr.net/npm/react-dom@16.12.0/umd/react-dom.production.min.js",
+      "react-router-dom": "https://cdn.jsdelivr.net/npm/react-router-dom@5.1.2/umd/react-router-dom.js",
+      "react-i18next": "https://cdn.jsdelivr.net/npm/react-i18next@11.2.1/dist/umd/react-i18next.min.js",
+      "rxjs": "https://cdn.jsdelivr.net/npm/rxjs@6.5.3/bundles/rxjs.umd.min.js",
+      "@openmrs/esm-module-config": "https://spa-modules.nyc3.digitaloceanspaces.com/@openmrs/esm-module-config/237aefc3a9c2921017cd60c2bbec170afa7dd189/openmrs-esm-module-config.js",
+      "@openmrs/esm-styleguide": "https://spa-modules.nyc3.digitaloceanspaces.com/@openmrs/esm-styleguide/dbf5cca549a5a9c35bb4f3a8defdbe503608cccc/openmrs-esm-styleguide.js",
+      "@openmrs/esm-devtools-app": "https://spa-modules.nyc3.digitaloceanspaces.com/@openmrs/esm-devtools-app/c8d19eb8ea0943eb3edf0a7606069b443a140092/openmrs-esm-devtools.js",
+      "@openmrs/esm-api": "https://spa-modules.nyc3.digitaloceanspaces.com/@openmrs/esm-api/93ed4b218464e2f86010cda09db596d5441ebf12/openmrs-esm-api.js",
+      "@openmrs/esm-error-handling": "https://spa-modules.nyc3.digitaloceanspaces.com/@openmrs/esm-error-handling/50053ebc76e0f9695f5731bc62b831be842d94c3/openmrs-esm-error-handling.js",
+      "@openmrs/esm-extension-manager": "https://spa-modules.nyc3.digitaloceanspaces.com/@openmrs/esm-extension-manager/03845a050efa23d9edc6bf043214cd472f63c485/openmrs-esm-extension-manager.js",
+      "@openmrs/esm-implementer-tools-app": "https://spa-modules.nyc3.digitaloceanspaces.com/@openmrs/esm-implementer-tools-app/a45a90a1f9a987b41b70d53aec2e4c2c8da8596a/openmrs-esm-implementer-tools-app.js",
+      "@ampath/esm-clinic-dashboard-hiv-lists-app": "http://localhost:8080/microfrontends/esm-clinic-dashboard/ampath-esm-clinic-dashboard-hiv-lists-app.js"
+    }
+  }
