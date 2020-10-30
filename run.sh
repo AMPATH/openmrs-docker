@@ -16,7 +16,7 @@ done
 
 
  # Write openmrs-runtime.properties file with linked database settings
-OPENMRS_CONNECTION_URL="connection.url=jdbc\:mysql\://$OPENMRS_MYSQL_HOST\:$OPENMRS_MYSQL_PORT/${DB_NAME}?autoReconnect\=true&sessionVariables\=default_storage_engine\=InnoDB&useUnicode\=true&characterEncoding\=UTF-8"
+OPENMRS_CONNECTION_URL="connection.url=jdbc\:mysql\://$OPENMRS_MYSQL_HOST\:$OPENMRS_MYSQL_PORT/${DB_NAME}?autoReconnect\=true&zeroDateTimeBehavior\=convertToNull&sessionVariables\=default_storage_engine\=InnoDB&useUnicode\=true&characterEncoding\=UTF-8"
 echo "${OPENMRS_CONNECTION_URL}" >> /root/temp/openmrs-runtime.properties
 echo "connection.username=${OPENMRS_DB_USER}" >> /root/temp/openmrs-runtime.properties
 echo "connection.password=${OPENMRS_DB_PASS}" >> /root/temp/openmrs-runtime.properties
