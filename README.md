@@ -6,11 +6,23 @@ First merge the splitted openmrs war file (- the openmrs platform v2.4.0 war fil
 ```
 cat openmrs.war.aa, openmrs.war.ab > openmrs.war
 ```
-
 Rename the main.env.example to main.env and use
 ```docker run --env-file=main.env```
 to override the env variables defined in the docker file  refer to http://ryannickel.com/html/playing_with_docker_enviornment_variables.html
 
+## List of AMRS modules
+Module name | Version 
+--- | --- 
+Legacy UI | `1.8.2`
+Calculation | `1.2.1`
+Html Form Entry	| `4.0.0`
+ID Generation | `4.6.0`
+Serialization XStream |	`0.2.14`
+Html Widgets | `1.10.0`
+Data Entry Statistics |	`1.7.0`
+Reporting Compatibility | `2.0.7`
+FHIR2 Module | `1.1.0`
+Rest web services | `2.29.0.b675eb`
 
-# last working image hash
+## last working image hash
 10.50.80.56:5005/openmrs:2.1.2@sha256:b5dbaa216b57afec1a7bb5c3721b59a83292463da6fe9adaf94158cfbf27dfde
