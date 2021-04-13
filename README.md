@@ -24,6 +24,7 @@ Reporting Compatibility | `2.0.7`
 FHIR2 Module | `1.1.0`
 Rest web services | `2.29.0.b675eb`
 Spa Module | `1.0.8-SNAPSHOT`
+Patient Matching Module | `1.4-SNAPSHOT`
 
 ## last working image hash
 10.50.80.56:5005/openmrs:2.1.2@sha256:b5dbaa216b57afec1a7bb5c3721b59a83292463da6fe9adaf94158cfbf27dfde
