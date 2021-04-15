@@ -28,6 +28,7 @@ Patient Matching Module | `1.4-SNAPSHOT`
 Cohort Module | `3.0.0-SNAPSHOT`
 XForms Module | `4.3.12`
 Muzima Core Module | `1.8.1-SNAPSHOT`
+FormEntry Module | `5.0.7-SNAPSHOT`
 
 ## last working image hash
 10.50.80.56:5005/openmrs:2.1.2@sha256:b5dbaa216b57afec1a7bb5c3721b59a83292463da6fe9adaf94158cfbf27dfde
