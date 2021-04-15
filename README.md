@@ -1,14 +1,18 @@
 # Openmrs platform docker
-This is a produces a docker image with openmrs platform `v2.4.0` with openmrs rest services module version `2.29.0.b675eb` and FHIR2 Module version `1.1.0`
+This is a produces a docker image with openmrs platform version `v2.4.0`. This comes with two modules bundled which are;
+  - FHIR2 Module `v1.1.0`
+  - Rest Web Services Module `v2.29.0.b675eb`
 
 ## Usage
-First merge the splitted openmrs war file (- the openmrs platform v2.4.0 war file was splitted to adhere to GitHub's 100MB limit for large files). Use the commmand;
+- First merge `openmrs.war.aa` and `openmrs.war.ab` (- the openmrs platform v2.4.0 war file was splitted to adhere to GitHub's 100MB limit for large files). Use the command;
 ```
-cat openmrs.war.aa, openmrs.war.ab > openmrs.war
+cat openmrs.war.* > openmrs.war
 ```
-Rename the main.env.example to main.env and use
-```docker run --env-file=main.env```
-to override the env variables defined in the docker file  refer to http://ryannickel.com/html/playing_with_docker_enviornment_variables.html
+- Rename the main.env.example to main.env and use
+```
+docker run --env-file=main.env
+```
+NOTE: To override the env variables defined in the docker file refer to documentation [here](http://ryannickel.com/html/playing_with_docker_enviornment_variables.html)
 
 ## List of AMRS modules
 Module name | Version 
