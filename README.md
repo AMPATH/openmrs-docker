@@ -25,7 +25,7 @@ Serialization XStream |	`0.2.14`
 Html Widgets | `1.10.0`
 Data Entry Statistics |	`1.7.0`
 Reporting Compatibility | `2.0.7`
-FHIR2 Module | `1.1.0`
+FHIR2 Module | `1.2.1`
 Rest web services | `2.29.0.b675eb`
 Spa Module | `1.0.8-SNAPSHOT`
 Patient Matching Module | `1.4-SNAPSHOT`
