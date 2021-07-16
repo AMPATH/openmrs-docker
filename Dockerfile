@@ -1,4 +1,4 @@
-FROM tomcat:8.5.68-jdk11-openjdk
+FROM tomcat:7-jre8
 
 ENV OPENMRS_HOME /root/.OpenMRS
 ENV OPENMRS_MODULES ${OPENMRS_HOME}/modules
@@ -18,7 +18,7 @@ ENV OPENMRS_NAME=""
 # Create database and setup openmrs db user
 COPY openmrs.war /root/temp/
 RUN mkdir -p ${OPENMRS_HOME}
-RUN apt-get update && apt-get install -y default-mysql-client libxml2-utils\
+RUN apt-get update && apt-get install -y mysql-client libxml2-utils openjdk-8-jdk \
     && mkdir -p /root/temp/modules
 RUN apt-get update \
  && DEBIAN_FRONTEND=noninteractive apt-get install -y \
@@ -37,6 +37,7 @@ COPY openmrs-runtime.properties /root/temp/
 COPY ./ScheduledGC ScheduledGC
 EXPOSE 8080
 # Add microfrontend assets
+RUN rm -rf /root/temp/microfrontends/*
 ADD microfrontends /root/temp/microfrontends
 # Setup openmrs, optionally load demo data, and start tomcat
 COPY run.sh /run.sh
