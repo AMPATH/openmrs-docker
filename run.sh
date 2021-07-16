@@ -37,13 +37,16 @@ echo "Setting up microfrontends"
 ls /root/temp/microfrontends
 cp -r /root/temp/microfrontends/* ${OPENMRS_HOME}/${OPENMRS_NAME}/frontend/
 cp  /root/temp/microfrontends/import-map.json ${OPENMRS_HOME}/${OPENMRS_NAME}/frontend/import-map.json
+
+echo "List copied frontend assets"
 ls ${OPENMRS_HOME}/${OPENMRS_NAME}/frontend/
 # Cleanup temp files
 rm -r /root/temp
 fi
 
 # Set custom memory options for tomcat
-export JAVA_OPTS="-Dfile.encoding=UTF-8 -server -Xms256m -Xmx1024m -XX:PermSize=256m -XX:MaxPermSize=512m"
+export JAVA_OPTS="-Dfile.encoding=UTF-8 -server -Xms1024m -Xmx2048m -XX:PermSize=256m -XX:MaxPermSize=1024m"
+
 echo "Setup cron"
 service rsyslog start
 service cron start
