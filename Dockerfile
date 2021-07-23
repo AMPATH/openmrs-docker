@@ -1,4 +1,4 @@
-FROM tomcat:7-jre8
+FROM tomcat:9-jdk11-adoptopenjdk-hotspot
 
 ENV OPENMRS_HOME /root/.OpenMRS
 ENV OPENMRS_MODULES ${OPENMRS_HOME}/modules
@@ -18,7 +18,7 @@ ENV OPENMRS_NAME=""
 # Create database and setup openmrs db user
 COPY openmrs.war /root/temp/
 RUN mkdir -p ${OPENMRS_HOME}
-RUN apt-get update && apt-get install -y mysql-client libxml2-utils openjdk-8-jdk \
+RUN apt-get update && apt-get install -y mysql-client libxml2-utils openjdk-11-jdk \
     && mkdir -p /root/temp/modules
 RUN apt-get update \
  && DEBIAN_FRONTEND=noninteractive apt-get install -y \
